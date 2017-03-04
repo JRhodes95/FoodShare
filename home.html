@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>FoodShare</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <style>
+            html,body {
+                height:100%;
+                width:100%;
+                margin:0;
+            }
+            body , body {
+                display:flex;
+            }
+            #centre_body {
+                margin:auto;
+                text-align: center;
+            }
+            #id {
+                margin: 10px;
+            }
+
+            .login_btn {
+                margin: 10px;
+                margin-bottom: 0px;
+            }
+            .right{
+                position: absolute;
+                right: 30px;
+                top: 10px; 
+            }
+            
+            .cat_well{
+                border-radius: 0px;
+                padding: 5px;
+            }
+            
+            .user_well{
+                border-radius: 0px;
+                padding: 5px;
+                border-style: none;
+                background: none;
+            }
+
+
+
+        </style>
+
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row right">
+                <div class="well user_well">
+                    <h2>User Profile Well</h2>
+                </div>
+            </div>
+        </div>
+        <div id="centre_body">
+            <img src="pictures/Picture1.png" width=30% id="logo">
+            <h1 id="logo">Food<b>Share</b></h1>
+            <form class="form-inline" >
+                <div class="form-group">
+                    <input type="email" class="form-control" id="search">
+                </div>
+                <button type="submit" class="btn btn-default">Search</button>
+            </form>
+            <div class="container-fluid">
+                <div class="row">
+                    <br>
+                    <div class="col-sm-3">
+                        <div class="well cat_well">
+                            <h2>Category 1</h2>
+                        </div>
+                    </div>
+                   <div class="col-sm-3">
+                       <div class="well cat_well">
+                            <h2>Category 2</h2>
+                        </div>
+                    </div>
+                   <div class="col-sm-3">
+                       <div class="well cat_well">
+                            <h2>Category 3</h2>
+                        </div>
+                    </div>
+                   <div class="col-sm-3">
+                       <div class="well cat_well">
+                            <h2>Category 4</h2>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            
+        </div>
+
+    </body>
+</html>

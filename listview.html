@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>FoodShare - Results</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <style>
+            
+            
+            .centre{
+                
+                margin: auto;
+                text-align: center;
+            }
+            .right{
+                position: absolute;
+                right: 30px;
+                top: 10px; 
+            }
+            .user_well{
+                border-radius: 0px;
+                padding: 3px;
+                border-style: none;
+                background: none;
+                
+            }
+            
+            .sidebar-left{
+                background: #f7f9f9;
+                position: absolute;
+                top: 0;
+                bottom: 0;  /*  this line, and the one above, confer full-height */
+                left: 0;
+                width: 15%;
+            }
+
+            .sidebar-right{
+                background: #f7f9f9;
+                position: absolute;
+                top: 0;
+                bottom: 0;  /*  this line, and the one above, confer full-height */
+                right: 0;
+                width: 15%;
+            }
+            
+            /* navbar */
+            .navbar-default {
+                background-color: white;
+                border-style: solid;
+                border: 0px;
+                border-bottom: solid green 1px;
+                border-top: solid green 1px;
+                padding: 0px;
+                border-radius: 0px;
+            }
+            /* title */
+            .navbar-default .navbar-brand {
+                color: white;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: white;
+            }
+            /* link */
+            .navbar-default .navbar-nav > li > a {
+                color: #456;
+                font-size: 130%;
+                margin: 0px;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: green;
+            }
+            .navbar-default .navbar-nav > .active > a, 
+            .navbar-default .navbar-nav > .active > a:hover, 
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: green;
+                background-color: white;
+                font-weight:bold;
+            }
+            .navbar-default .navbar-nav > .open > a, 
+            .navbar-default .navbar-nav > .open > a:hover, 
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: #555;
+                background-color: #D5D5D5;
+
+            }
+            
+            .item{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            
+            .pagination > .active > a, 
+            .pagination > .active > a:hover, 
+            .pagination > .active > a:focus {
+                color: white;
+                background-color: green;
+                font-weight:bold;
+            }
+            .pagination > .open > a, 
+            .pagination > .open > a:hover, 
+            .pagination > .open > a:focus {
+                color: #555;
+                background-color: #D5D5D5;
+                
+
+            }
+            
+            #logo_bar{
+                height:100%;
+            }
+            
+        </style>
+        
+
+    </head>
+    <body>
+        <div class="container-fluid">
+            
+            <!--Janky sidebars-->
+            <div class="sidebar-left"></div>
+            <div class="sidebar-right"></div>
+            
+            <!--Bootstrap three column layout-->
+            <div class="col-sm-2" ></div>
+            
+            <!--Central content column-->
+            <div class="col-sm-8">
+                <!--topmost row-->
+                <div class="row" id="logo_bar">
+                    <div class="left">
+                        <h1>Food<b>Share</b></h1>
+                    </div>
+                    <div class="right">
+                        <div class="well user_well">
+                            <p><b>User Name</b></p>
+                            <p>Messages:#</p>
+                            <p><a href="#">Log out</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Navbar-->
+                <div class="row" id="nav_bar">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#">Food<b>Share</b></a>
+                            </div>
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="home.html">Home</a></li>
+                                
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                
+                <!--Search bar row-->
+                <div class="row" id="search">
+                    <div class="col-sm-9">
+                        <form class="form-inline" >
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Search</button>
+                        </form>
+                        <p id="no_results"># Results</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <p>Filters here</p>
+                    </div>
+                </div>
+                
+                <!--Tabs to fill with items-->
+                <!--Use tabs as pages through bootstrap data-toggles-->
+                <div class="tab-content">
+                    <!--First page-->
+                    <div id="menu0" class="tab-pane fade in active">
+                        <div class="row item" id="item_1">
+                            <div class="col-sm-4">
+                                <img src="pictures/320x200placeholder.png" class="item_thumb" width=100%>
+                            </div>
+                            <div class="col-sm-5">
+                                <p><b>Item 1 name</b></p>
+                                <p>User Name</p>
+                                <p>Location</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <button class="btn">View Item</button>
+                                <p>Expiry: xx/xx/xx</p>
+                            </div>
+                        </div>
+                        <div class="row item" id="item_2">
+                            <div class="col-sm-4">
+                                <img src="pictures/320x200placeholder.png" class="item_thumb" width=100%>
+                            </div>
+                            <div class="col-sm-5">
+                                <p><b>Item 2 name</b></p>
+                                <p>User Name</p>
+                                <p>Location</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <button class="btn">View Item</button>
+                                <p>Expiry: xx/xx/xx</p>
+                            </div>
+                        </div>
+                        <div class="row item" id="item_3">
+                            <div class="col-sm-4">
+                                <img src="pictures/320x200placeholder.png" class="item_thumb" width=100%>
+                            </div>
+                            <div class="col-sm-5">
+                                <p><b>Item 3 name</b></p>
+                                <p>User Name</p>
+                                <p>Location</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <button class="btn">View Item</button>
+                                <p>Expiry: xx/xx/xx</p>
+                            </div>
+                        </div>
+                        <div class="row item" id="item_4">
+                            <div class="col-sm-4">
+                                <img src="pictures/320x200placeholder.png" class="item_thumb" width=100%>
+                            </div>
+                            <div class="col-sm-5">
+                                <p><b>Item 4 name</b></p>
+                                <p>User Name</p>
+                                <p>Location</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <button class="btn">View Item</button>
+                                <p>Expiry: xx/xx/xx</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Second page-->
+                    <div id="menu1" class="tab-pane fade">
+                        <div class="row item" id="item_5">
+                            <div class="col-sm-4">
+                                <img src="pictures/320x200placeholder.png" class="item_thumb" width=100%>
+                            </div>
+                            <div class="col-sm-5">
+                                <p><b>Item 5 name</b></p>
+                                <p>User Name</p>
+                                <p>Location</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <button class="btn">View Item</button>
+                                <p>Expiry: xx/xx/xx</p>
+                            </div>
+                        </div>
+                        <div class="row item" id="item_6">
+                            <div class="col-sm-4">
+                                <img src="pictures/320x200placeholder.png" class="item_thumb" width=100%>
+                            </div>
+                            <div class="col-sm-5">
+                                <p><b>Item 6 name</b></p>
+                                <p>User Name</p>
+                                <p>Location</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <button class="btn">View Item</button>
+                                <p>Expiry: xx/xx/xx</p>
+                            </div>
+                        </div>
+                        <div class="row item" id="item_7">
+                            <div class="col-sm-4">
+                                <img src="pictures/320x200placeholder.png" class="item_thumb" width=100%>
+                            </div>
+                            <div class="col-sm-5">
+                                <p><b>Item 7 name</b></p>
+                                <p>User Name</p>
+                                <p>Location</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <button class="btn">View Item</button>
+                                <p>Expiry: xx/xx/xx</p>
+                            </div>
+                        </div>
+                        <div class="row item" id="item_8">
+                            <div class="col-sm-4">
+                                <img src="pictures/320x200placeholder.png" class="item_thumb" width=100%>
+                            </div>
+                            <div class="col-sm-5">
+                                <p><b>Item 8 name</b></p>
+                                <p>User Name</p>
+                                <p>Location</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <button class="btn">View Item</button>
+                                <p>Expiry: xx/xx/xx</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Pagination buttons link to each page-->
+                <div class="row page_nos centre">
+                  
+                    <ul class="pagination">
+                        <li class="active"><a data-toggle="tab" href="#menu0">1</a></li>
+                        <li><a data-toggle="tab" href="#menu1">2</a></li>
+                    </ul>
+                    
+                </div>
+                
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+
+    </body>
+</html>
